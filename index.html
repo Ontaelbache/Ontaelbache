@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css Principal.css">
+    <title>Onta' el bache</title>
+
+    <script>
+
+        function actualizarFecha() {
+            // Obtiene la fecha y hora actual
+            var now = new Date();
+            // Obtiene la hora actual en formato de cadena de texto
+            // El argumento 'es-ES' especifica el idioma y la configuración regional (Español de España)
+            // El objeto de opciones { hour12: false } se utiliza para mostrar la hora en formato de 24 horas
+            var time = now.toLocaleTimeString('es-ES', { hour12: false });
+            // Obtiene la fecha actual en formato de cadena de texto
+            // El argumento 'es-ES' especifica el idioma y la configuración regional (Español de España)
+            // El objeto de opciones { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+            // se utiliza para mostrar el día de la semana, el año, el mes y el día en un formato largo
+            var date = now.toLocaleDateString('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+            // Obtiene el elemento del documento con el id 'clock'
+            var clockContainer = document.getElementById('clock');
+            // Actualiza el contenido del elemento con la hora y fecha actual
+            clockContainer.innerHTML = time + ' | ' + date;
+        }
+
+        //Mediante la funcion setInterval manda a llamar a la funcion cada cierto tiempo
+        setInterval(actualizarFecha, 1000);
+
+    </script>
+
+</head>
+
+<body>
+
+
+
+    <header class="header">
+
+        <div id="clock"></div>
+
+        <div class="menu container">
+            <a href="#" class="logo"></a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="img/menu.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#ancla-services">Servicios</a></li>
+                    <li><a href="#ancla-map">Mapa</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-content container">
+            <h1>Onta' el bache</h1>
+            <p>
+                Estamos comprometidos a brindarte información precisa y actualizada sobre la
+                calidad de las calles en tu área. Sabemos lo importante que es contar con calles en
+                buen estado para garantizar una conducción segura y cómoda, y es por eso que
+                hemos creado un mapa dinámico que muestra la calidad de las calles.
+            </p>
+        </div>
+
+    </header>
+
+
+    <section class="coffee">
+
+        <div class="coffee-content container">
+
+            <h2>Problemáticas</h2>
+            <p class="txt-p">
+                El tema del estado de las calles en Ciudad Obregón Sonora es grave por el estado de las mismas pero con
+                la creación de una página web para informar sobre el bacheado podría ser beneficioso para la comunidad
+                debido a los siguientes motivos:
+            </p>
+
+            <div class="coffee-group">
+
+                <div class="coffee-1">
+                    <img src="img/img7 sin fondo.png" id="segvial" alt="">
+                    <h3>Seguridad vial</h3>
+                    <p>
+                        Permite a los conductores planificar rutas seguras y evitar calles con
+                        baches, reduciendo el riesgo de accidentes y daños en los vehículos.
+                    </p>
+                </div>
+
+                <div class="coffee-1">
+                    <img src="img/img8.png" id="ahorroc" alt="">
+                    <h3>Ahorro de costos</h3>
+                    <p>
+                        Evita daños en los vehículos al permitir a los conductores evitar
+                        las calles dañadas, lo que resulta en ahorros económicos al evitar reparaciones
+                        innecesarias.
+                    </p>
+                </div>
+
+                <div class="coffee-1">
+                    <img src="img/img9.png" id="efft" alt="">
+                    <h3>Eficiencia en el tráfico</h3>
+                    <p>
+                        Ayuda a mantener un flujo de tráfico más eficiente al permitir
+                        a los conductores elegir rutas alternativas, reduciendo los tiempos de viaje y la
+                        congestión.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <main class="services" id="ancla-services">
+
+        <div class="services-content container">
+            <h2>Servicios Onta' el bache</h2>
+
+            <div class="services-group">
+
+                <div class="services-1">
+                    <img src="img/img10.png" alt="">
+                    <h3>Mapeo</h3>
+                </div>
+
+                <div class="services-1">
+                    <img src="img/img11.png" alt="">
+                    <h3>Actualizaciones</h3>
+                </div>
+
+            </div>
+
+            <p>
+                Nuestros servicios tiene como atractivo involucrar a los usuarios y así tener mejor conocimiento de las
+                calles, Onta' el bache es un proyecto pequeño por ahora, pero que si se nos brinda el apoyo poder
+                escalar con facilidad, el sistema de contacto es accesible para cualquier usuario con la función
+                principal de poder cambiar el estado de las calles a medida que avanza el tiempo tanto como para ver si
+                empeoro y fueron reparadas.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <section class="map" id="ancla-map">
+
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1sP4xBiiW8s1H5p4TnJC9qIBk3GH8xac&ehbc=2E312F"
+            width="80%" height="700" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </section>
+
+
+    <footer class="footer">
+
+        <div class="footer-content container">
+
+            <div class="link" id="link-1">
+                <h3>Onta' el bache</h3>
+                <ul>
+                    <li><a href="#"><img src="img/logo/logo con fondo blanco.png" id="link-logo-img-1" alt=""></a></li>
+                    <li><a href="#"><img src="img/logo/logo simple.png" id="link-logo-img-2" alt=""></a></li>
+                </ul>
+            </div>
+
+            <div class="link" id="link-2">
+                <h3>Redes Sociales</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">WhatsApp</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
