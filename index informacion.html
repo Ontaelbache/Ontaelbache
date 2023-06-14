@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css Informacion.css">
+    <link rel="stylesheet" media="screen and (max-width:768px)" href="mobile.css">
+    <link rel="stylesheet" media="screen and (max-width:1200px)" href="tablet.css">
+    <link rel="shorcut icon" href="img/logo/logo simple sin fondo.png">
+    <title>Onta' el bache</title>
+
+    <script>
+
+        function actualizarFecha() {
+            // Obtiene la fecha y hora actual
+            var now = new Date();
+            // Obtiene la hora actual en formato de cadena de texto
+            // El argumento 'es-ES' especifica el idioma y la configuración regional (Español de España)
+            // El objeto de opciones { hour12: false } se utiliza para mostrar la hora en formato de 24 horas
+            var time = now.toLocaleTimeString('es-ES', { hour12: false });
+            // Obtiene la fecha actual en formato de cadena de texto
+            // El argumento 'es-ES' especifica el idioma y la configuración regional (Español de España)
+            // El objeto de opciones { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+            // se utiliza para mostrar el día de la semana, el año, el mes y el día en un formato largo
+            var date = now.toLocaleDateString('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+            // Obtiene el elemento del documento con el id 'clock'
+            var clockContainer = document.getElementById('clock');
+            // Actualiza el contenido del elemento con la hora y fecha actual
+            clockContainer.innerHTML = time + ' | ' + date;
+        }
+
+        //Mediante la funcion setInterval manda a llamar a la funcion cada cierto tiempo
+        setInterval(actualizarFecha, 1000);
+
+    </script>
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div id="clock"></div>
+
+        <div class="menu container">
+            <a href="#" class="logo"></a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="img/menu.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar" style="z-index: 100;">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index informacion.html">Servicios</a></li>
+                    <li><a href="Index mapa.html">Mapa</a></li>
+                    <li><a href="index formulario.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-content container">
+            <h1 style="font-size: 60px; text-align: center;">Servicios</h1>
+        </div>
+
+    </header>
+
+    <section class="coffee">
+
+        <div class="coffee-content container">
+
+            <h2>Sobre Nosotros</h2>
+            <p class="txt-p">
+                Onta´el bache se compromete a brindar información precisa y actualizada 
+                sobre la calidad de las calles en tu área. Reconocemos la importancia de 
+                contar con calles en buen estado para garantizar una conducción segura y 
+                cómoda. Por esta razón, hemos creado un mapa dinámico que muestra la calidad 
+                de las calles en tu ciudad.<br>
+
+                El objetivo principal de Onta´el bache es empoderarte con información confiable 
+                y útil sobre las condiciones de las calles en tu área. Ya sea que estés planificando 
+                un viaje, buscando rutas alternativas o simplemente deseas conocer el estado general 
+                de las calles de tu ciudad, Onta´el bache es tu mejor aliado. Confía en nosotros para 
+                obtener información precisa y actualizada sobre la calidad de las calles en tu área.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="coffee-2">
+
+        <div class="coffee-content container">
+
+            <h2>¿Por qué hacemos esto?</h2>
+            <p class="txt-p">
+                En muchas ciudades, el estado de deterioro de las calles debido a los baches es una 
+                preocupación común. Este problema afecta negativamente la calidad de vida de los 
+                residentes y el flujo del tráfico, además de generar daños en los vehículos y aumentar 
+                el riesgo de accidentes.<br>
+
+                Se propone crear un sitio web que brinde información sobre el estado de las calles de 
+                la ciudad, con el objetivo de ofrecer a los usuarios datos precisos y actualizados sobre 
+                los baches. Se espera que este sitio web se convierta en una herramienta valiosa tanto 
+                para conductores como para peatones, permitiéndoles tomar decisiones informadas al 
+                planificar sus recorridos.
+            </p>
+
+            <img src="img/logo/logo simple sin fondo.png" class="coffee-2-img" alt=""> 
+
+            <p class="txt-p">
+                Ciudad Obregón, al igual que muchas otras ciudades, enfrenta desafíos relacionados con 
+                el estado de sus calles y la congestión del tráfico. Estos problemas pueden resultar en 
+                tiempos de viaje más largos, mayor consumo de combustible y molestias para los usuarios 
+                en general.<br>
+
+                Nuestros objetivos plantean que al contar con esta información actualizada y detallada 
+                sobre las mejores y peores calles de Ciudad Obregón, los usuarios podrán planificar sus 
+                rutas de manera más eficiente, evitando aquellas calles que presenten problemas y optando 
+                por rutas alternativas que les permitan ahorrar tiempo y reducir el impacto en su vehículo. 
+                Además, al utilizar la aplicación, los usuarios también contribuirían a la comunidad al 
+                proporcionar información valiosa que ayudaría a otros conductores a tomar decisiones 
+                informadas sobre sus rutas
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="coffee">
+
+        <div class="coffee-content container">
+
+            <h2>Objetivos</h2>
+            <p class="txt-p">
+                1.- Recopilar datos sobre el estado de las calles de Ciudad Obregón, incluyendo información 
+                sobre baches, congestión de tráfico y obras en curso, a través de la participación de los 
+                usuarios en la aplicación móvil.<br>
+
+                2.- Analizar y clasificar la información recopilada para identificar las mejores y peores 
+                calles de Ciudad Obregón en términos de calidad vial y condiciones de tráfico.<br>
+
+                3.- Evaluar la efectividad y confiabilidad de la información proporcionada por los usuarios 
+                en términos de precisión y actualidad, mediante la comparación con datos recopilados por 
+                autoridades locales u otras fuentes confiables.<br>
+
+                4.- Desarrollar algoritmos y herramientas de procesamiento de datos que permitan generar 
+                rutas alternativas y sugerencias de desplazamiento basadas en la información recopilada 
+                sobre las condiciones de las calles.<br>
+            </p>
+
+        </div>
+
+    </section>
+
+    <footer class="footer">
+
+        <div class="footer-content container">
+
+            <div class="link" id="link-1">
+                <h3>Onta' el bache</h3>
+                <ul>
+                    <li><a href="#"><img src="img/logo/logo con fondo blanco.png" id="link-logo-img-1" alt=""></a></li>
+                    <li><a href="#"><img src="img/logo/logo simple.png" id="link-logo-img-2" alt=""></a></li>
+                </ul>
+            </div>
+
+            <div class="link" id="link-2">
+                <h3>Redes Sociales</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">WhatsApp</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

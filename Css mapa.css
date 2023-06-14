@@ -6,11 +6,12 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
+
 }
 
 .container {
@@ -240,11 +241,66 @@ body {
     font-size: 18px;
 }
 
+
+.map-information ul li{
+    list-style: none !important;
+    display: inline-flex !important;
+    margin-left: 180px !important;
+    margin-top: 30px !important;
+}
+
+.square1 {
+    height: 20px;
+    width: 20px;
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(124, 179, 66);
+    margin-right: 10px;
+}
+.square2 {
+    height: 20px;
+    width: 20px;
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 234, 0);
+    margin-right: 10px;
+}
+
+.square3 {
+    height: 20px;
+    width: 20px;
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(245, 124, 66);
+    margin-right: 10px;
+}
+
+.square4 {
+    height: 20px;
+    width: 20px;
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(166, 39, 20);
+    margin-right: 10px;
+}
+
+
 .map {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+
+
 
 .map iframe {
     border-radius: 20px;
@@ -296,58 +352,7 @@ p {
     height: 170px;
 }
 
-#link-logo-img-2{
+#link-logo-img-2 {
     border-radius: 20px;
     display: none;
-}
-
-
-.map-information ul li{
-    list-style: none !important;
-    display: inline-flex !important;
-    margin-left: 180px !important;
-    margin-top: 30px !important;
-}
-
-.square1 {
-    height: 20px;
-    width: 20px;
-    display: flex;
-    border-radius: 4px;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(124, 179, 66);
-    margin-right: 10px;
-}
-.square2 {
-    height: 20px;
-    width: 20px;
-    display: flex;
-    border-radius: 4px;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(255, 234, 0);
-    margin-right: 10px;
-}
-
-.square3 {
-    height: 20px;
-    width: 20px;
-    display: flex;
-    border-radius: 4px;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(245, 124, 66);
-    margin-right: 10px;
-}
-
-.square4 {
-    height: 20px;
-    width: 20px;
-    display: flex;
-    border-radius: 4px;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(166, 39, 20);
-    margin-right: 10px;
 }
