@@ -1,194 +1,290 @@
 <!DOCTYPE html>
 <html lang="es">
+    <head>
+        <!-- Pagina hecha por Oliver Alejandro Robles Cota -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" media="screen and (max-width:768px)" href="mobile.css">
+        <link rel="stylesheet" media="screen and (max-width:1200px)" href="tablet.css">
+        <link rel="shorcut icon" href="img/logo/logo simple sin fondo.png">
+        <title>Onta' el bache</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" media="screen and (max-width:768px)" href="mobile.css">
-    <link rel="stylesheet" media="screen and (max-width:1200px)" href="tablet.css">
-    <title>Onta' el bache</title>
+        <script>
+            //Hecho por Oliver Robles
+            //Hecho por Carlos Ramirez
 
-    <script>
+            function actualizarFecha() {
+                // Obtiene la fecha y hora actual
+                var now = new Date();
 
-        function actualizarFecha() {
-            // Obtiene la fecha y hora actual
-            var now = new Date();
-            // Obtiene la hora actual en formato de cadena de texto
-            // El argumento 'es-ES' especifica el idioma y la configuración regional (Español de España)
-            // El objeto de opciones { hour12: false } se utiliza para mostrar la hora en formato de 24 horas
-            var time = now.toLocaleTimeString('es-ES', { hour12: false });
-            // Obtiene la fecha actual en formato de cadena de texto
-            // El argumento 'es-ES' especifica el idioma y la configuración regional (Español de España)
-            // El objeto de opciones { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
-            // se utiliza para mostrar el día de la semana, el año, el mes y el día en un formato largo
-            var date = now.toLocaleDateString('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-            // Obtiene el elemento del documento con el id 'clock'
-            var clockContainer = document.getElementById('clock');
-            // Actualiza el contenido del elemento con la hora y fecha actual
-            clockContainer.innerHTML = time + ' | ' + date;
-        }
+                // Obtiene la hora actual en formato de cadena de texto
+                // El argumento 'es-ES' especifica el idioma y la configuración regional (Español de España)
+                // El objeto de opciones { hour12: false } se utiliza para mostrar la hora en formato de 24 horas
+                var time = now.toLocaleTimeString('es-ES', { hour12: false });
 
-        //Mediante la funcion setInterval manda a llamar a la funcion cada cierto tiempo
-        setInterval(actualizarFecha, 1000);
+                // Obtiene la fecha actual en formato de cadena de texto
+                // El argumento 'es-ES' especifica el idioma y la configuración regional (Español de España)
+                // El objeto de opciones { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+                // se utiliza para mostrar el día de la semana, el año, el mes y el día en un formato largo
+                var date = now.toLocaleDateString('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
-    </script>
+                // Obtiene el elemento del documento con el id 'clock'
+                var clockContainer = document.getElementById('clock');
 
-</head>
+                // Actualiza el contenido del elemento con la hora y fecha actual
+                clockContainer.innerHTML = time + ' | ' + date;
+            }
 
-<body>
-    <header class="header">
-        <div id="clock"></div>
+            //Mediante la funcion setInterval manda a llamar a la funcion cada cierto tiempo
+            setInterval(actualizarFecha, 1000);
 
-        <div class="menu container">
-            <a href="#" class="logo"></a>
-            <input type="checkbox" id="menu">
-            <label for="menu">
-                <img src="img/menu.png" class="menu-icono" alt="">
+        </script>
+    </head>
+
+    <body>
+        <header class="header">
+
+            <div id="clock"></div>
+
+            <div class="menu container">
+                <a href="#" class="logo"></a>
+                <input type="checkbox" id="menu">
+                <label for="menu">
+                    <img src="img/menu.png" class="menu-icono" alt="">
+                </label>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index informacion.html">Servicios</a></li>
+                        <li><a href="Index mapa.html">Mapa</a></li>
+                        <li><a href="index formulario.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="header-content container">
+                <h1>Onta' el bache</h1>
+                <p>
+                    Estamos comprometidos a brindarte información precisa y actualizada sobre la
+                    calidad de las calles. Sabemos lo importante que es contar con vías en
+                    buen estado para garantizar una conducción segura y cómoda, es por eso que
+                    hemos creado un mapa dinámico que muestra la calidad de las calles.
+                </p>
+            </div>
+
+        </header>
+
+
+        <section class="coffee">
+
+            <div class="coffee-content container">
+
+                <h2 class="testo">Soluciones</h2>
+                <p class="txt-p testo">
+                    El tema del estado de las calles en Ciudad Obregón Sonora es grave, el uso de 
+                    Onta' el bache para informar sobre el bacheado podría ser beneficioso para la comunidad
+                    debido a los siguientes motivos:
+                </p>
+
+                <div class="coffee-group">
+
+                    <div class="coffee-1">
+                        <img src="img/img7 sin fondo.png" id="segvial" alt="">
+                        <h3 class="testo">Seguridad vial</h3>
+                        <p class="testo">
+                            Permite a los conductores planificar rutas seguras y evitar calles con
+                            baches, reduciendo el riesgo de accidentes.
+                        </p>
+                    </div>
+
+                    <div class="coffee-1">
+                        <img src="img/img8.png" id="ahorroc" alt="">
+                        <h3 class="testo">Ahorro de costos</h3>
+                        <p class="testo">
+                            Evita daños en los vehículos al permitir a los conductores prevenir
+                            las calles dañadas, lo que resulta en ahorros económicos al evitar reparaciones
+                            innecesarias.
+                        </p>
+                    </div>
+
+                    <div class="coffee-1">
+                        <img src="img/img9.png" id="efft" alt="">
+                        <h3 class="testo">Eficiencia en el tráfico</h3>
+                        <p class="testo">
+                            Ayuda a mantener un flujo de tráfico más eficiente al permitir
+                            a los conductores elegir rutas alternativas, reduciendo los tiempos de viaje y la
+                            congestión.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <main class="services" id="ancla-services">
+
+            <div class="services-content container">
+                <h2>Servicios Onta' el bache</h2>
+
+                <div class="services-group">
+
+                    <div class="services-1">
+                        <img src="img/img10.png" alt="">
+                        <h3>Mapeo</h3>
+                    </div>
+
+                    <div class="services-1">
+                        <img src="img/img11.png" alt="">
+                        <h3>Actualizaciones</h3>
+                    </div>
+
+                </div>
+
+                <p>
+                    Este servicio tiene como atractivo involucrar a los usuarios y así tener un mejor 
+                    conocimiento sobre las calles, el sistema de contacto es accesible para cualquier usuario 
+                    con la función principal de poder cambiar el estado de las calles a medida que avanza el 
+                    tiempo, tanto como para ver si empeoraron o fueron reparadas.
+                </p>
+
+            </div>
+
+        </main>
+
+        <div class="map-information">
+            <ul>
+                <li class="testo"><div class="square1"></div>Excelente</li>
+                <li class="testo"><div class="square2"></div>Buena</li>
+                <li class="testo"><div class="square3"></div>Mala</li>
+                <li class="testo"><div class="square4"></div>Muy mala</li>
+            </ul>
+        </div>
+        <section class="map" id="ancla-map">
+
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1sP4xBiiW8s1H5p4TnJC9qIBk3GH8xac&ehbc=2E312F"
+                width="80%" height="700" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </section>
+
+
+        <div class="Pr">
+            <link rel="stylesheet" href="styleprueba.css">
+            <input type="checkbox" id="darkmode-toggle">
+            <label for="darkmode-toggle" class="Prueba">
+                <svg version="1.1" class="sun" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" viewBox="0 0 496 496" style="enable-background: new 0 0 496 496;" xml:space="preserve">
+    
+                    <rect x="152.994" y="58.921" transform="matrix(0.3827 0.9239 -0.9239 0.3827 168.6176 -118.5145)"
+                        width="40.001" height="16" />
+                    <rect x="46.9" y="164.979" transform="matrix(0.9239 0.3827 -0.3827 0.9239 71.29 -12.4346)"
+                        width="40.001" height="16" />
+                    <rect x="46.947" y="315.048" transform="matrix(0.9239 -0.3827 0.3827 0.9239 -118.531 50.2116)"
+                        width="40.001" height="16" />
+    
+                    <rect x="164.966" y="409.112" transform="matrix(-0.9238 -0.3828 0.3828 -0.9238 168.4872 891.7491)"
+                        width="16" height="39.999" />
+                    <rect x="303.031" y="421.036" transform="matrix(-0.3827 -0.9239 0.9239 -0.3827 50.2758 891.6655)"
+                        width="40.001" height="16" />
+                    <rect x="409.088" y="315.018" transform="matrix(-0.9239 -0.3827 0.3827 -0.9239 701.898 785.6559)"
+                        width="40.001" height="16" />
+    
+                    <rect x="409.054" y="165.011" transform="matrix(-0.9239 0.3827 -0.3827 -0.9239 891.6585 168.6574)"
+                        width="40.001" height="16" />
+                    <rect x="315.001" y="46.895" transform="matrix(0.9238 0.3828 -0.3828 0.9238 50.212 -118.5529)"
+                        width="16" height="39.999" />
+    
+                    <path
+                        d="M248,88c-88.224,0-160,71.776-160,160s71.776,160,160,160s160-71.776,160-160S336.224,88,248,88z M248,392 c-79.4,0-144-64.6-144-144s64.6-144,144-144s144,64.6,144,144S327.4,392,248,392z" />
+    
+                    <rect x="240" width="16" height="72" />
+                    <rect x="62.097" y="90.096" transform="matrix(0.7071 0.7071 -0.7171 0.7171 98.0963 -40.6334)"
+                        width="71.999" height="16" />
+                    <rect y="240" width="72" height="16" />
+    
+                    <rect x="90.091" y="361.915" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -113.9157 748.643)"
+                        width="16" height="71.999" />
+                    <rect x="240" y="424" width="16" height="72" />
+    
+                    <rect x="361.881" y="389.915" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 397.8562 960.6281)"
+                        width="71.999" height="16" />
+                    <rect x="424" y="240" width="72" height="16" />
+                    <rect x="389.911" y="62.091" transform="matrix(0.7071 0.7071 -0.7071 0.7071 185.9067 -252.6957)"
+                        width="16" height="71.999" />
+    
+                </svg>
+    
+                <svg version="1.1" class="moon" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 49.739 49.739"
+                    style="enable-background: new 0 0 49.739 49.739;" xml:space="preserve">
+    
+                    <path d="M25.068,48.889c-9.173,0-18.017-5.06-22.396-13.804C-3.373,23.008,1.164,8.467,13.003,1.979l2.061-1.129l-0.615,2.268
+                                c-1.479,5.459-0.899,11.25,1.633,16.306c2.75,5.493,7.476,9.587,13.305,11.526c5.831,1.939,12.065,1.492,17.559-1.258v0
+                                c0.25-0.125,0.492-0.258,0.734-0.391l2.061-1.13l-0.585,2.252c-1.863,6.873-6.577,12.639-12.933,15.822
+                                C32.639,48.039,28.825,48.888,25.068,48.889z M12.002,4.936c-9.413,6.428-12.756,18.837-7.54,29.253
+                                c5.678,11.34,19.522,15.945,30.864,10.268c5.154-2.582,9.136-7.012,11.181-12.357c-5.632,2.427-11.882,2.702-17.752,0.748
+                                c-6.337-2.108-11.473-6.557-14.463-12.528C11.899,15.541,11.11,10.16,12.002,4.936z" />
+    
+                </svg>
             </label>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="index informacion.html">Servicios</a></li>
-                    <li><a href="Index mapa.html">Mapa</a></li>
-                    <li><a href="index formulario.html">Contacto</a></li>
-                </ul>
-            </nav>
+    
+            <script>
+                var checkbox = document.getElementById("darkmode-toggle");
+                var body = document.body;
+                
+                //Hecho por Noe Valenzuela
+                checkbox.addEventListener("change", function () {
+                    if (this.checked) {
+                        body.style.backgroundColor = "#525252";
+                        var elementos = document.getElementsByClassName("testo");
+                        //Hecho por Brian Sandoval
+                        for (var i = 0; i < elementos.length; i++) {
+                            elementos[i].style.color = "white";
+                        }
+                    } else {
+                        body.style.backgroundColor = "#e1e2e6";
+                        var elementos = document.getElementsByClassName("testo");
+                        //Hecho por Brian Sandoval
+                        for (var i = 0; i < elementos.length; i++) {
+                            elementos[i].style.color = "black";
+                        }
+                    }
+                });
+            </script>
         </div>
 
-        <div class="header-content container">
-            <h1>Onta' el bache</h1>
-            <p>
-                Estamos comprometidos a brindarte información precisa y actualizada sobre la
-                calidad de las calles. Sabemos lo importante que es contar con vías en
-                buen estado para garantizar una conducción segura y cómoda, es por eso que
-                hemos creado un mapa dinámico que muestra la calidad de las calles.
-            </p>
-        </div>
-
-    </header>
 
 
-    <section class="coffee">
 
-        <div class="coffee-content container">
 
-            <h2>Soluciones</h2>
-            <p class="txt-p">
-                El tema del estado de las calles en Ciudad Obregón Sonora es grave, el uso de 
-                Onta' el bache para informar sobre el bacheado podría ser beneficioso para la comunidad
-                debido a los siguientes motivos:
-            </p>
 
-            <div class="coffee-group">
+        <footer class="footer">
 
-                <div class="coffee-1">
-                    <img src="img/img7 sin fondo.png" id="segvial" alt="">
-                    <h3>Seguridad vial</h3>
-                    <p>
-                        Permite a los conductores planificar rutas seguras y evitar calles con
-                        baches, reduciendo el riesgo de accidentes.
-                    </p>
+            <div class="footer-content container">
+
+                <div class="link" id="link-1">
+                    <h3>Onta' el bache</h3>
+                    <ul>
+                        <li><a href="#"><img src="img/logo/logo con fondo blanco.png" id="link-logo-img-1" alt=""></a></li>
+                        <li><a href="#"><img src="img/logo/logo simple.png" id="link-logo-img-2" alt=""></a></li>
+                    </ul>
                 </div>
 
-                <div class="coffee-1">
-                    <img src="img/img8.png" id="ahorroc" alt="">
-                    <h3>Ahorro de costos</h3>
-                    <p>
-                        Evita daños en los vehículos al permitir a los conductores prevenir
-                        las calles dañadas, lo que resulta en ahorros económicos al evitar reparaciones
-                        innecesarias.
-                    </p>
-                </div>
-
-                <div class="coffee-1">
-                    <img src="img/img9.png" id="efft" alt="">
-                    <h3>Eficiencia en el tráfico</h3>
-                    <p>
-                        Ayuda a mantener un flujo de tráfico más eficiente al permitir
-                        a los conductores elegir rutas alternativas, reduciendo los tiempos de viaje y la
-                        congestión.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-
-    <main class="services" id="ancla-services">
-
-        <div class="services-content container">
-            <h2>Servicios Onta' el bache</h2>
-
-            <div class="services-group">
-
-                <div class="services-1">
-                    <img src="img/img10.png" alt="">
-                    <h3>Mapeo</h3>
-                </div>
-
-                <div class="services-1">
-                    <img src="img/img11.png" alt="">
-                    <h3>Actualizaciones</h3>
+                <div class="link" id="link-2">
+                    <h3>Redes Sociales</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/p/CBTis-37-Cd-Obregon-Sonora-100057119783849/">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/explore/locations/12158947/?hl=es-la">Instagram</a></li>
+                        <li><a href="https://twitter.com/CBTis37_Dir">Twitter</a></li>
+                    </ul>
                 </div>
 
             </div>
 
-            <p>
-                Este servicio tiene como atractivo involucrar a los usuarios y así tener un mejor 
-                conocimiento sobre las calles, el sistema de contacto es accesible para cualquier usuario 
-                con la función principal de poder cambiar el estado de las calles a medida que avanza el 
-                tiempo, tanto como para ver si empeoraron o fueron reparadas.
-            </p>
-
-        </div>
-
-    </main>
-
-    <div class="map-information">
-        <ul>
-            <li><div class="square1"></div>Excelente</li>
-            <li><div class="square2"></div>Buena</li>
-            <li><div class="square3"></div>Mala</li>
-            <li><div class="square4"></div>Muy mala</li>
-        </ul>
-    </div>
-    <section class="map" id="ancla-map">
-
-        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1sP4xBiiW8s1H5p4TnJC9qIBk3GH8xac&ehbc=2E312F"
-            width="80%" height="700" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-    </section>
-
-
-    <footer class="footer">
-
-        <div class="footer-content container">
-
-            <div class="link" id="link-1">
-                <h3>Onta' el bache</h3>
-                <ul>
-                    <li><a href="#"><img src="img/logo/logo con fondo blanco.png" id="link-logo-img-1" alt=""></a></li>
-                    <li><a href="#"><img src="img/logo/logo simple.png" id="link-logo-img-2" alt=""></a></li>
-                </ul>
-            </div>
-
-            <div class="link" id="link-2">
-                <h3>Redes Sociales</h3>
-                <ul>
-                    <li><a href="https://www.facebook.com/p/CBTis-37-Cd-Obregon-Sonora-100057119783849/">Facebook</a></li>
-                    <li><a href="https://www.instagram.com/explore/locations/12158947/?hl=es-la">Instagram</a></li>
-                    <li><a href="https://twitter.com/CBTis37_Dir">Twitter</a></li>
-                </ul>
-            </div>
-
-        </div>
-
-    </footer>
-
-</body>
-
+        </footer>
+    </body>
 </html>
