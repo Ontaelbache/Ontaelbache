@@ -26,14 +26,17 @@
     right: 0;
     background-color: #323337;
     display: none;
+    z-index: 100000;
 }
 
 .menu .navbar ul li {
     width: 100%;
+    z-index: 100000;
 }
 
 #menu:checked~.navbar {
     display: initial;
+    z-index: 100000;
 }
 
 .header {
@@ -150,7 +153,6 @@
 .square4 {
     margin-left: -160px !important;
 }
-
 
 .Prueba{
     bottom: 80%;
