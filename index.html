@@ -7,13 +7,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" media="screen and (max-width:768px)" href="mobile.css">
-        <link rel="stylesheet" media="screen and (max-width:1200px)" href="tablet.css">
+        <link rel="stylesheet" media="screen and (max-width:1300px)" href="tablet.css">
         <link rel="shorcut icon" href="img/logo/logo simple sin fondo.png">
         <title>Onta' el bache</title>
 
         <script>
-            //Hecho por Oliver Robles
-            //Hecho por Carlos Ramirez
+            //Hecho por Noe Valenzuela, Brian Sandoval, Carlos Ramirez y Oliver Robles
 
             function actualizarFecha() {
                 // Obtiene la fecha y hora actual
@@ -39,11 +38,10 @@
 
             //Mediante la funcion setInterval manda a llamar a la funcion cada cierto tiempo
             setInterval(actualizarFecha, 1000);
-
         </script>
     </head>
 
-    <body>
+    <body style="background-color: rgb(225, 226, 230)">
         <header class="header">
 
             <div id="clock"></div>
@@ -65,7 +63,7 @@
             </div>
 
             <div class="header-content container">
-                <h1>Onta' el bache</h1>
+                <h1 id="text"></h1>
                 <p>
                     Estamos comprometidos a brindarte información precisa y actualizada sobre la
                     calidad de las calles. Sabemos lo importante que es contar con vías en
@@ -73,6 +71,16 @@
                     hemos creado un mapa dinámico que muestra la calidad de las calles.
                 </p>
             </div>
+
+            <script>
+                //Hecho por Oliver Robles
+
+                // Obtén el elemento por su id
+                var elemento = document.getElementById("text");
+
+                // Asigna el texto utilizando innerHTML
+                elemento.innerHTML = "Onta' el bache";
+            </script>
 
         </header>
 
@@ -83,7 +91,7 @@
 
                 <h2 class="testo">Soluciones</h2>
                 <p class="txt-p testo">
-                    El tema del estado de las calles en Ciudad Obregón Sonora es grave, el uso de 
+                    El tema del estado de las calles en Ciudad Obregón Sonora es grave, el uso de
                     Onta' el bache para informar sobre el bacheado podría ser beneficioso para la comunidad
                     debido a los siguientes motivos:
                 </p>
@@ -145,22 +153,34 @@
                 </div>
 
                 <p>
-                    Este servicio tiene como atractivo involucrar a los usuarios y así tener un mejor 
-                    conocimiento sobre las calles, el sistema de contacto es accesible para cualquier usuario 
-                    con la función principal de poder cambiar el estado de las calles a medida que avanza el 
-                    tiempo, tanto como para ver si empeoraron o fueron reparadas.
+                    Este servicio tiene como atractivo involucrar a los usuarios y así
+                    obtener un mejor conocimiento sobre el estado de las calles. El sistema
+                    de contacto es accesible para cualquier usuario y su función principal es
+                    permitir que los usuarios actualicen el estado de las calles a medida que
+                    pasa el tiempo, ya sea para informar si empeoraron o si fueron reparadas.
+                    Esto proporciona una visión actualizada y dinámica de la calidad de las
+                    calles en tiempo real.
                 </p>
 
             </div>
 
         </main>
 
+
         <div class="map-information">
             <ul>
-                <li class="testo"><div class="square1"></div>Excelente</li>
-                <li class="testo"><div class="square2"></div>Buena</li>
-                <li class="testo"><div class="square3"></div>Mala</li>
-                <li class="testo"><div class="square4"></div>Muy mala</li>
+                <li class="testo">
+                    <div class="square1"></div>Excelente
+                </li>
+                <li class="testo">
+                    <div class="square2"></div>Buena
+                </li>
+                <li class="testo">
+                    <div class="square3"></div>Mala
+                </li>
+                <li class="testo">
+                    <div class="square4"></div>Muy mala
+                </li>
             </ul>
         </div>
         <section class="map" id="ancla-map">
@@ -178,77 +198,85 @@
             <label for="darkmode-toggle" class="Prueba">
                 <svg version="1.1" class="sun" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                     x="0px" y="0px" viewBox="0 0 496 496" style="enable-background: new 0 0 496 496;" xml:space="preserve">
-    
+
                     <rect x="152.994" y="58.921" transform="matrix(0.3827 0.9239 -0.9239 0.3827 168.6176 -118.5145)"
                         width="40.001" height="16" />
                     <rect x="46.9" y="164.979" transform="matrix(0.9239 0.3827 -0.3827 0.9239 71.29 -12.4346)"
                         width="40.001" height="16" />
                     <rect x="46.947" y="315.048" transform="matrix(0.9239 -0.3827 0.3827 0.9239 -118.531 50.2116)"
                         width="40.001" height="16" />
-    
+
                     <rect x="164.966" y="409.112" transform="matrix(-0.9238 -0.3828 0.3828 -0.9238 168.4872 891.7491)"
                         width="16" height="39.999" />
                     <rect x="303.031" y="421.036" transform="matrix(-0.3827 -0.9239 0.9239 -0.3827 50.2758 891.6655)"
                         width="40.001" height="16" />
                     <rect x="409.088" y="315.018" transform="matrix(-0.9239 -0.3827 0.3827 -0.9239 701.898 785.6559)"
                         width="40.001" height="16" />
-    
+
                     <rect x="409.054" y="165.011" transform="matrix(-0.9239 0.3827 -0.3827 -0.9239 891.6585 168.6574)"
                         width="40.001" height="16" />
                     <rect x="315.001" y="46.895" transform="matrix(0.9238 0.3828 -0.3828 0.9238 50.212 -118.5529)"
                         width="16" height="39.999" />
-    
+
                     <path
                         d="M248,88c-88.224,0-160,71.776-160,160s71.776,160,160,160s160-71.776,160-160S336.224,88,248,88z M248,392 c-79.4,0-144-64.6-144-144s64.6-144,144-144s144,64.6,144,144S327.4,392,248,392z" />
-    
+
                     <rect x="240" width="16" height="72" />
                     <rect x="62.097" y="90.096" transform="matrix(0.7071 0.7071 -0.7171 0.7171 98.0963 -40.6334)"
                         width="71.999" height="16" />
                     <rect y="240" width="72" height="16" />
-    
+
                     <rect x="90.091" y="361.915" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -113.9157 748.643)"
                         width="16" height="71.999" />
                     <rect x="240" y="424" width="16" height="72" />
-    
+
                     <rect x="361.881" y="389.915" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 397.8562 960.6281)"
                         width="71.999" height="16" />
                     <rect x="424" y="240" width="72" height="16" />
                     <rect x="389.911" y="62.091" transform="matrix(0.7071 0.7071 -0.7071 0.7071 185.9067 -252.6957)"
                         width="16" height="71.999" />
-    
+
                 </svg>
-    
+
                 <svg version="1.1" class="moon" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 49.739 49.739"
                     style="enable-background: new 0 0 49.739 49.739;" xml:space="preserve">
-    
+
                     <path d="M25.068,48.889c-9.173,0-18.017-5.06-22.396-13.804C-3.373,23.008,1.164,8.467,13.003,1.979l2.061-1.129l-0.615,2.268
-                                c-1.479,5.459-0.899,11.25,1.633,16.306c2.75,5.493,7.476,9.587,13.305,11.526c5.831,1.939,12.065,1.492,17.559-1.258v0
-                                c0.25-0.125,0.492-0.258,0.734-0.391l2.061-1.13l-0.585,2.252c-1.863,6.873-6.577,12.639-12.933,15.822
-                                C32.639,48.039,28.825,48.888,25.068,48.889z M12.002,4.936c-9.413,6.428-12.756,18.837-7.54,29.253
-                                c5.678,11.34,19.522,15.945,30.864,10.268c5.154-2.582,9.136-7.012,11.181-12.357c-5.632,2.427-11.882,2.702-17.752,0.748
-                                c-6.337-2.108-11.473-6.557-14.463-12.528C11.899,15.541,11.11,10.16,12.002,4.936z" />
-    
+                                    c-1.479,5.459-0.899,11.25,1.633,16.306c2.75,5.493,7.476,9.587,13.305,11.526c5.831,1.939,12.065,1.492,17.559-1.258v0
+                                    c0.25-0.125,0.492-0.258,0.734-0.391l2.061-1.13l-0.585,2.252c-1.863,6.873-6.577,12.639-12.933,15.822
+                                    C32.639,48.039,28.825,48.888,25.068,48.889z M12.002,4.936c-9.413,6.428-12.756,18.837-7.54,29.253
+                                    c5.678,11.34,19.522,15.945,30.864,10.268c5.154-2.582,9.136-7.012,11.181-12.357c-5.632,2.427-11.882,2.702-17.752,0.748
+                                    c-6.337-2.108-11.473-6.557-14.463-12.528C11.899,15.541,11.11,10.16,12.002,4.936z" />
+
                 </svg>
             </label>
-    
+
             <script>
+                //Hecho por Noe Valenzuela, Brian Sandoval, Carlos Ramirez y Oliver Robles
+
+                // Asignar el elemento de checkbox a la variable "checkbox"
                 var checkbox = document.getElementById("darkmode-toggle");
+                // Obtener el elemento "body" del documento
                 var body = document.body;
-                
-                //Hecho por Noe Valenzuela
+                // Agregar un evento de escucha al cambio del checkbox
                 checkbox.addEventListener("change", function () {
+                    // Verificar si el checkbox está marcado
                     if (this.checked) {
+                        // Si está marcado, cambiar el color de fondo del body a gris oscuro
                         body.style.backgroundColor = "#525252";
+                        // Obtener todos los elementos con la clase "testo"
                         var elementos = document.getElementsByClassName("testo");
-                        //Hecho por Brian Sandoval
+                        // Iterar sobre los elementos y cambiar el color de texto a blanco
                         for (var i = 0; i < elementos.length; i++) {
                             elementos[i].style.color = "white";
                         }
                     } else {
+                        // Si no está marcado, cambiar el color de fondo del body a gris claro
                         body.style.backgroundColor = "#e1e2e6";
+                        // Obtener todos los elementos con la clase "testo"
                         var elementos = document.getElementsByClassName("testo");
-                        //Hecho por Brian Sandoval
+                        // Iterar sobre los elementos y cambiar el color de texto a negro
                         for (var i = 0; i < elementos.length; i++) {
                             elementos[i].style.color = "black";
                         }
@@ -256,10 +284,6 @@
                 });
             </script>
         </div>
-
-
-
-
 
 
         <footer class="footer">
@@ -277,9 +301,11 @@
                 <div class="link" id="link-2">
                     <h3>Redes Sociales</h3>
                     <ul>
-                        <li><a href="https://www.facebook.com/p/CBTis-37-Cd-Obregon-Sonora-100057119783849/">Facebook</a></li>
-                        <li><a href="https://www.instagram.com/explore/locations/12158947/?hl=es-la">Instagram</a></li>
-                        <li><a href="https://twitter.com/CBTis37_Dir">Twitter</a></li>
+                        <li><a href="https://www.facebook.com/p/CBTis-37-Cd-Obregon-Sonora-100057119783849/"
+                                target="_blank">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/explore/locations/12158947/?hl=es-la"
+                                target="_blank">Instagram</a></li>
+                        <li><a href="https://twitter.com/CBTis37_Dir" target="_blank">Twitter</a></li>
                     </ul>
                 </div>
 

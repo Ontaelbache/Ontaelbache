@@ -46,35 +46,35 @@
     transition: 0.3s;
 }
 
-input{
+#darkmode-toggle{
     width: 0;
     height: 0;
     visibility: hidden;
 }
 
-input:checked+label{
+#darkmode-toggle:checked+label{
     background: #e1e2e6;
 }
 
-input:checked+label::after{
+#darkmode-toggle:checked+label::after{
     left: 142px;
     transform: translateX(-100%);
     background: linear-gradient(180deg, #777, #3a3a3a);
 }
 
-input:checked+label svg.sun{
+#darkmode-toggle:checked+label svg.sun{
     fill: #525252;
 }
 
-input:checked+label svg.moon{
+#darkmode-toggle:checked+label svg.moon{
     fill: #fff;
 }
 
-input:active::after{
+#darkmode-toggle:active::after{
     width: 260px;;
 }
 
-.background,{
+.background{
     z-index: -1;
     transition: 0.3s;
 }

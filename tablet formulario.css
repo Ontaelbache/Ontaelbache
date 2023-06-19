@@ -172,25 +172,24 @@
     margin-left: 80px;
 }
 
-input,textarea {
+#td{
     background: none;
     color: #c6c6c6;
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
     padding: 10px 10px 10px 5px;
     display: block;
-    width: 80%;
+    width: 100%;
     border: none;
     border-bottom: 1px solid var(--colortextos);
+    z-index: 10000;
 }
 
-textarea {
+#td {
     resize: none;
 }
 
-
-input:focus,
-textarea:focus {
+#td:focus {
     outline: none;
     color: #5e5d5d;
 }
@@ -206,8 +205,8 @@ textarea:focus {
     pointer-events: none;
 }
 
-input:focus~label,
-input:valid~label,
+#td:focus~label,
+#td:valid~label,
 textarea:focus~label,
 textarea:valid~label {
     top: -14px;
@@ -218,11 +217,12 @@ textarea:valid~label {
     position: relative;
     display: block;
     width: 100%;
+    z-index: 10000;
 }
 
-input:focus~.barra::before,
-textarea:focus~.barra::before {
+#td:focus~.barra::before {
     width: 100%;
+    z-index: 10000;
 }
 
 .barra::before {
@@ -233,21 +233,21 @@ textarea:focus~.barra::before {
     position: absolute;
     background-color: #fc9c05;
     transition: 0.3s ease width;
+    z-index: 10000;
 }
 
 button {
     background-color: #fc9c05;
     border: none;
     display: block;
-    width: 60%;
+    width: 80%;
     margin: 10px auto;
     color: #fff;
-    height: 50px;
+    height: 40px;
     font-size: 16px;
     cursor: pointer;
 }
 
 button:active {
     background-color: #fc9c05;
-    transform: translateY(4px);
 }
